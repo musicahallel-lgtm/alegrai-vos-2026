@@ -1,0 +1,64 @@
+.caravanas {
+  background: var(--bg-2);
+}
+
+.caravanas__grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.caravanas__perks {
+  list-style: none;
+  margin-top: 24px;
+  display: grid;
+  gap: 11px;
+}
+
+.caravanas__perks li {
+  color: var(--text-dim);
+  font-size: 16px;
+}
+
+.caravanas__card {
+  background: var(--bg);
+  border: 1px solid var(--surface-border);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+
+.caravanas__card-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 22px;
+}
+
+.caravanas__btn {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.caravanas__fine {
+  margin-top: 14px;
+  text-align: center;
+  color: var(--text-faint);
+  font-size: 13px;
+}
+
+@media (max-width: 820px) {
+  .caravanas__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 460px) {
+  .caravanas__card {
+    padding: 24px;
+  }
+}

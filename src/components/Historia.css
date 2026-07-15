@@ -1,0 +1,76 @@
+.historia__head {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.historia__head .section-title {
+  margin: 0 auto;
+}
+
+.historia__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.historia__text p {
+  color: #5a4a3d;
+  font-size: 17px;
+  margin-bottom: 16px;
+}
+
+.historia__text strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.historia__text em {
+  color: var(--blue);
+  font-style: italic;
+  font-weight: 600;
+}
+
+.historia__timeline {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  border-left: 2px solid rgba(41, 166, 222, 0.35);
+  padding-left: 26px;
+}
+
+.historia__timeline li {
+  position: relative;
+  padding: 8px 0 14px;
+}
+
+.historia__dot {
+  position: absolute;
+  left: -34px;
+  top: 12px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 0 4px rgba(41, 166, 222, 0.18);
+}
+
+.historia__timeline strong {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.historia__timeline p {
+  margin-top: 4px;
+  color: #6a5747;
+  font-size: 14.5px;
+}
+
+@media (max-width: 820px) {
+  .historia__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

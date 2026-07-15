@@ -15,6 +15,9 @@ export const EVENTO = {
   realizacaoLogo: '/apoio/hallel.png',
   // Link oficial de inscrição (plataforma e-inscricao). Troque quando sair o de 2026.
   inscricaoUrl: 'https://www.e-inscricao.com/Alegraivos/hallel2025-qjna',
+  // WhatsApp da organização (formato internacional 55 + DDD + número). Usado nos formulários e contatos.
+  whatsapp: '5592993243020',
+  whatsappLabel: '(92) 99324-3020',
   instagram: 'alegraivoshallel',
   instagramUrl: 'https://instagram.com/alegraivoshallel',
   // Endereço para o mapa (Google Maps embed via query).

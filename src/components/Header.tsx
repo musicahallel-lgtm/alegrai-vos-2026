@@ -22,8 +22,10 @@ export default function Header() {
 
         <nav className="site-nav">
           <a href="#sobre">O evento</a>
+          <a href="#conheca-nos">História</a>
           <a href="#atracoes">Atrações</a>
-          <a href="#local">Local</a>
+          <a href="#caravanas">Caravanas</a>
+          <a href="#parcerias">Parceiros</a>
           <a href="#inscricao">Inscrição</a>
         </nav>
 

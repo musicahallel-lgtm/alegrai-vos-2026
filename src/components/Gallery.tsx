@@ -9,11 +9,11 @@ export default function Gallery() {
         <div className="gallery__head reveal">
           <p className="eyebrow">Edições anteriores</p>
           <h2 className="section-title">
-            Momentos que <span className="light">marcam</span>
+            Relembre momentos <span className="light">marcantes</span>
           </h2>
           <p className="lead" style={{ margin: '14px auto 0' }}>
-            Um pouco do que já vivemos juntos — louvor, adoração e comunhão em cada edição do
-            Alegrai-vos.
+            Reviva um pouco do que já vivemos juntos nas edições anteriores do Alegrai-vos — louvor,
+            adoração e comunhão.
           </p>
         </div>
 

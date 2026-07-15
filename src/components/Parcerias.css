@@ -1,0 +1,69 @@
+.parcerias__head {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.parcerias__head .section-title {
+  margin: 0 auto;
+}
+
+.parcerias__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.parceria-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid rgba(29, 14, 3, 0.1);
+  border-radius: var(--radius);
+  padding: 34px;
+  box-shadow: 0 10px 26px rgba(29, 14, 3, 0.07);
+}
+
+.parceria-card--destaque {
+  border: 2px solid var(--red);
+  box-shadow: 0 16px 40px rgba(242, 34, 15, 0.16);
+}
+
+.parceria-card__icon {
+  font-size: 26px;
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+
+.parceria-card--destaque .parceria-card__icon {
+  color: var(--red);
+}
+
+.parceria-card h3 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.parceria-card p {
+  color: #5a4a3d;
+  font-size: 16px;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.parceria-card__contato {
+  margin-top: 14px;
+  font-size: 14px;
+  color: #6a5747;
+  font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .parcerias__grid {
+    grid-template-columns: 1fr;
+  }
+}
