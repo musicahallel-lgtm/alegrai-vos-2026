@@ -17,9 +17,9 @@ export default function Speakers() {
     <section className="section section--cream speakers" id="atracoes">
       <div className="container">
         <div className="speakers__head reveal">
-          <p className="eyebrow">Presenças confirmadas</p>
+          <p className="eyebrow">Atrações</p>
           <h2 className="section-title">
-            Quem vai <span className="light">ministrar</span> com a gente
+            Convidados <span className="light">confirmados</span>
           </h2>
         </div>
 
