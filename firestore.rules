@@ -1,0 +1,24 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Inscrições do Alegrai-vos 2026.
+    // Qualquer visitante pode CRIAR uma inscrição (formulário público),
+    // mas ninguém pode ler, editar ou apagar pelo cliente.
+    // A leitura/exportação é feita pelo Console do Firebase ou por admin autenticado.
+    match /inscricoes/{id} {
+      allow create: if isValidInscricao(request.resource.data);
+      allow read, update, delete: if false;
+    }
+
+    function isValidInscricao(data) {
+      return data.nome is string && data.nome.size() >= 2 && data.nome.size() <= 120
+        && data.whatsapp is string && data.whatsapp.size() >= 8 && data.whatsapp.size() <= 25
+        && data.email is string && data.email.size() <= 160
+        && data.cidade is string && data.cidade.size() <= 80
+        && data.comunidade is string && data.comunidade.size() <= 120
+        && data.faixaEtaria is string && data.faixaEtaria.size() <= 40;
+    }
+  }
+}

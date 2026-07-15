@@ -1,0 +1,132 @@
+.speakers__head {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.speakers__head .section-title {
+  margin: 0 auto;
+}
+
+.speakers__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.speaker {
+  position: relative;
+  text-align: center;
+  padding: 26px 18px 28px;
+  background: #fff;
+  border: 1px solid rgba(29, 14, 3, 0.1);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 26px rgba(29, 14, 3, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.7s ease;
+}
+
+.speaker:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 38px rgba(29, 14, 3, 0.16);
+}
+
+/* Convidado em destaque */
+.speaker--destaque {
+  border: 2px solid var(--blue);
+  padding-top: 34px;
+  box-shadow: 0 16px 40px rgba(41, 166, 222, 0.24);
+}
+
+.speaker--destaque .speaker__photo {
+  width: 148px;
+  height: 148px;
+}
+
+.speaker--destaque .speaker__name {
+  font-size: 23px;
+}
+
+.speaker__badge {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #fff;
+  background: var(--red);
+  padding: 5px 14px;
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(242, 34, 15, 0.32);
+}
+
+.speaker__photo {
+  position: relative;
+  width: 132px;
+  height: 132px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--light-blue);
+  background: linear-gradient(160deg, #eaf6fc, #d3ebf6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.speaker__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 12%;
+}
+
+.speaker__initials {
+  position: absolute;
+  font-family: var(--font-display);
+  font-size: 38px;
+  font-weight: 900;
+  color: var(--blue);
+  opacity: 0;
+}
+
+.speaker__photo--fallback .speaker__initials {
+  opacity: 1;
+}
+
+.speaker__name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.speaker__role {
+  margin-top: 8px;
+  color: #6a5747;
+  font-size: 14px;
+}
+
+.speakers__note {
+  text-align: center;
+  margin-top: 40px;
+  color: #8a7867;
+  font-size: 14px;
+}
+
+@media (max-width: 820px) {
+  .speakers__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .speakers__grid {
+    grid-template-columns: 1fr;
+  }
+}

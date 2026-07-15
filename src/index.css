@@ -1,0 +1,184 @@
+:root {
+  /* Identidade visual estilo Festival Halleluya:
+     fundo escuro, tipografia pesada em caixa alta, azul-claro + vermelho */
+  --bg: #0d0f14;
+  --bg-2: #14171f;
+  --bg-3: #1c2029;
+
+  --cream: #faece1;
+  --ink: #1d0e03;
+
+  --light-blue: #97d5ec;
+  --blue: #29a6de;
+  --red: #f2220f;
+  --gold: #f5b301;
+
+  --text: #f5f6f8;
+  --text-dim: #aab0bd;
+  --text-faint: #79808d;
+
+  --surface: rgba(255, 255, 255, 0.045);
+  --surface-border: rgba(255, 255, 255, 0.11);
+
+  --max: 1140px;
+  --radius: 14px;
+  --font-display: 'Montserrat', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 96px 0;
+  position: relative;
+}
+
+/* Seção clara (creme) — alterna com as escuras, como no Halleluya */
+.section--cream {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5.4vw, 58px);
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.section--cream .section-title {
+  color: var(--ink);
+}
+
+.section-title .light {
+  color: var(--light-blue);
+}
+
+.section--cream .section-title .light {
+  color: var(--blue);
+}
+
+.lead {
+  color: var(--text-dim);
+  font-size: 18px;
+  max-width: 640px;
+}
+
+.section--cream .lead {
+  color: #5a4a3d;
+}
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 15px 32px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease,
+    color 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--red);
+  color: #fff;
+  box-shadow: 0 10px 26px rgba(242, 34, 15, 0.32);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(242, 34, 15, 0.46);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.55);
+  color: #fff;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.btn-blue {
+  background: var(--light-blue);
+  color: var(--ink);
+}
+
+.btn-blue:hover {
+  transform: translateY(-2px);
+  background: #b3e2f3;
+}
+
+/* Utilidades de aparição */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 66px 0;
+  }
+}
